@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+# 전사 결과물(입력 파일 옆에 생기므로 보통 저장소 밖이지만, 저장소 안에서 시험할 때 대비)
+*.m4a
+*.mp3
+*.wav
+*.timeline.txt

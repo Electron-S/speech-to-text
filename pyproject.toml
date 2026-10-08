@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stt"
+version = "0.1.0"
+description = "m4a 음성녹음 -> 한국어 텍스트 (화자 구분 + 타임스탬프)"
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.12",
+    "faster-whisper>=1.2",
+    "sherpa-onnx>=1.13",
+    "static-ffmpeg>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+stt = "stt.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
